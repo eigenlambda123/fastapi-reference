@@ -5,10 +5,10 @@ from sqlalchemy.orm import Session
 from app.users.schemas import UserCreate, UserRead
 from app.users.crud import create_user, get_user_by_email
 
-from app.auth.schemas import UserLogin
-from app.auth.jwt_handler import create_access_token
-from app.auth.password_utils import get_password_hash, verify_password
-from app.auth.oauth2 import get_current_user
+from .schemas import UserLogin
+from .jwt_handler import create_access_token
+from .password_utils import get_password_hash, verify_password
+from .oauth2 import get_current_user
 from app.core.database import get_session
 
 router = APIRouter(prefix="/auth", tags=["auth"])
