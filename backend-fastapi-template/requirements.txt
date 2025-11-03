@@ -12,3 +12,6 @@ bcrypt==4.3.0
 
 # File handling
 python-multipart
+
+# Email
+fastapi-mail

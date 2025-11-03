@@ -4,7 +4,7 @@ from app.tasks.utils import simulate_long_task, save_uploaded_file
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
 
-UPLOAD_DIR = Path("uploads")
+UPLOAD_DIR = Path("uploaded_files")
 
 @router.post("/process")
 def run_background_task(background_tasks: BackgroundTasks, seconds: int = 5):
