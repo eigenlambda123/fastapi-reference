@@ -7,6 +7,8 @@ from app.files.router import router as files_router
 from app.tasks.router import router as tasks_router
 from app.email.router import router as email_router
 from app.notifications.router import router as notifications_router
+from app.ai_summarizer.router import router as ai_router
+
 from app.core.database import init_db
 
 app = FastAPI()
@@ -31,6 +33,7 @@ app.include_router(files_router)
 app.include_router(tasks_router)
 app.include_router(email_router)
 app.include_router(notifications_router)
+app.include_router(ai_router)
 
 @app.get("/")
 async def read_root():

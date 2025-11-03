@@ -53,6 +53,12 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
+
+    # ------------------------------------------------------------
+    # AI CONFIG
+    # ------------------------------------------------------------
+    COHERE_API_KEY: str = Field(..., env="COHERE_API_KEY")
+
     @property
     def DB_URL(self) -> str:
         """
