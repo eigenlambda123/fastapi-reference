@@ -15,3 +15,6 @@ python-multipart
 
 # Email
 fastapi-mail
+
+# Websockets
+websockets

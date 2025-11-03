@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #notifications {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .notification {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f0f0f0;
+            border-left: 4px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="status">Status: Disconnected</div>
+    <pre id="log"></pre>
+    <div id="notifications">
+        <h3>Notifications</h3>
+    </div>
+    <script>
+        const statusDiv = document.getElementById('status');
+        const logDiv = document.getElementById('log');
+        
+        function log(msg) {
+            console.log(msg);
+            logDiv.textContent += msg + '\n';
+        }
+
+        try {
+            log('Attempting to connect...');
+            const socket = new WebSocket("ws://localhost:8000/notifications/ws");
+            
+            socket.onopen = function(e) {
+                log("[open] Connection established");
+                statusDiv.textContent = "Connected!";
+            };
+
+            socket.onmessage = function(event) {
+                log(`[message] Data received: ${event.data}`);
+                
+                // Add notification to UI
+                const notifDiv = document.createElement('div');
+                notifDiv.className = 'notification';
+                notifDiv.textContent = event.data;
+                document.getElementById('notifications').appendChild(notifDiv);
+            };
+
+            socket.onerror = function(error) {
+                log(`[error] ${JSON.stringify(error, Object.getOwnPropertyNames(error))}`);
+                statusDiv.textContent = "Error occurred";
+            };
+
+            socket.onclose = function(event) {
+                log(`[close] Connection closed, code=${event.code} reason=${event.reason}`);
+                statusDiv.textContent = "Disconnected";
+            };
+        } catch (err) {
+            log(`[fatal] ${err.toString()}`);
+            statusDiv.textContent = "Failed to connect";
+        }
+    </script>
+</body>
+</html>
