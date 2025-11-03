@@ -21,3 +21,4 @@ websockets
 
 # AI Integration
 cohere
+pyttsx3
