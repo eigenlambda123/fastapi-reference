@@ -19,6 +19,14 @@ fastapi-mail
 # Websockets
 websockets
 
-# AI Integration
+# === AI Integration ===
+
+# NLP and Summarization
 cohere
+
+# Text-to-Speech
 pyttsx3
+
+# Speech-to-Text
+openai-whisper
+pydub 

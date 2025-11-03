@@ -1,1 +1,2 @@
 Check  https://docs.cohere.com/docs/models#command  for cohere model
+Install 'ffmpeg' for speech-to-text here: https://www.gyan.dev/ffmpeg/builds
