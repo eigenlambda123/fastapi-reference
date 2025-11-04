@@ -1,8 +1,10 @@
 import cohere
-from app.core.config import settings    
+from app.core.config import settings
+from app.core.cache import cached
 
 co = cohere.Client(settings.COHERE_API_KEY)
 
+@cached(ttl=300)
 async def summarize_text(text: str, style: str = "medium") -> str:
     if style == "short":
         instruction = "Summarize in 1–2 sentences."

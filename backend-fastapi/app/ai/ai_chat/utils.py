@@ -1,9 +1,11 @@
 import cohere
 from app.core.config import settings
 from .prompts import PRESET_PROMPTS
+from app.core.cache import cached
 
 co = cohere.Client(settings.COHERE_API_KEY)
 
+@cached(ttl=300)
 def generate_chat_response(messages, model="command-r-plus", temperature=0.5, system_prompt=None, preset=None):
     """
     Generate a chat response from Cohere with optional system prompt or preset.
