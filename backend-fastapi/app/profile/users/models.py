@@ -5,7 +5,7 @@ from typing import Optional, TYPE_CHECKING
 from sqlmodel import Relationship
 
 if TYPE_CHECKING:
-    from app.roles.models import Role
+    from app.profile.roles.models import Role
 
 # Lightweight role implementation
 # class RoleEnum(str, Enum):

@@ -2,7 +2,7 @@ from sqlmodel import SQLModel, Field, Relationship
 from typing import Optional, List, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from app.users.models import User
+    from app.profile.users.models import User
 
 
 class RoleBase(SQLModel):

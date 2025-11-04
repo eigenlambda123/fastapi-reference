@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel import Session
 from app.core.database import get_session
-from app.admin.dependencies import get_current_admin_user
-from app.admin import crud
-from app.admin.schemas import UserRoleUpdate, AdminUserRead
+from app.profile.admin.dependencies import get_current_admin_user
+from app.profile.admin import crud
+from app.profile.admin.schemas import UserRoleUpdate, AdminUserRead
 from typing import List
 
 router = APIRouter(prefix="/admin", tags=["admin"])

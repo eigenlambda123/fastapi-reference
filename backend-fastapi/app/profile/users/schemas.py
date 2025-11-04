@@ -26,7 +26,7 @@ class UserCreate(UserBase):
 
 # Use this if we're linking to the Role model
 from typing import Optional
-from app.roles.schemas import RoleRead
+from app.profile.roles.schemas import RoleRead
 
 class UserRead(BaseModel):
     id: int

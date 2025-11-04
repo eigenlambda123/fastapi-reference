@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 # from users module
-from app.users.schemas import UserCreate, UserRead
-from app.users.crud import create_user, get_user_by_email
+from app.profile.users.schemas import UserCreate, UserRead
+from app.profile.users.crud import create_user, get_user_by_email
 
 from .schemas import UserLogin
 from .jwt_handler import create_access_token

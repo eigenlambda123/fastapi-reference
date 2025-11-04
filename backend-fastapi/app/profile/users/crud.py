@@ -16,7 +16,7 @@ from .schemas import (
 
 # use this if we're linking to Role model
 from app.auth.password_utils import get_password_hash
-from app.roles.models import Role
+from app.profile.roles.models import Role
 from fastapi import HTTPException, status
 
 def create_user(db: Session, user_data: UserCreate):

@@ -1,6 +1,6 @@
 from sqlmodel import Session, select
-from app.users.models import User
-from app.roles.models import Role
+from app.profile.users.models import User
+from app.profile.roles.models import Role
 
 def get_all_users(db: Session):
     return db.exec(select(User)).all()

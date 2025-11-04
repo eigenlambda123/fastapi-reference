@@ -14,5 +14,5 @@ def get_session():
 
 
 def init_db():
-    import app.users.models
+    import app.profile.users.models
     SQLModel.metadata.create_all(engine)

@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.users.router import router as users_router
+from app.profile.users.router import router as users_router
 from app.auth.router import router as auth_router
-from app.roles.router import router as roles_router
+from app.profile.roles.router import router as roles_router
 from app.files.router import router as files_router
 from app.tasks.router import router as tasks_router
 from app.email.router import router as email_router
@@ -12,7 +12,7 @@ from app.ai.ai_sentiment.router import router as ai_sentiment_router
 from app.ai.ai_tts.router import router as ai_tts_router
 from app.ai.ai_stt.router import router as ai_stt_router
 from app.ai.ai_chat.router import router as ai_chat_router
-from app.admin.router import router as admin_router
+from app.profile.admin.router import router as admin_router
 
 from app.core.database import init_db
 
