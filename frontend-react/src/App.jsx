@@ -21,6 +21,7 @@ import SendNotification from './pages/Notifications/SendNotification.jsx';
 
 import Summarize from './pages/AI/Summarize.jsx';
 import Sentiment from './pages/AI/Sentiment.jsx';
+import TTSPage from './pages/AI/TTSPage.jsx';
 
 
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
 
       <Route path="/ai/summarize" element={<Summarize />} />
       <Route path="/ai/sentiment" element={<Sentiment />} />
+      <Route path="/ai/tts" element={<TTSPage />} />
     </Routes>
   );
 };
