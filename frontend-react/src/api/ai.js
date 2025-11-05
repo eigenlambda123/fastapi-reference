@@ -17,3 +17,11 @@ export const textToSpeech = async (data) => {
   const res = await api.post("/tts/", data, { responseType: "blob" });
   return res.data;
 };
+
+// Speech-to-text
+export const speechToText = async (formData) => {
+  const res = await api.post("/stt/", formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+  return res.data;
+};
