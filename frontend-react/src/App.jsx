@@ -12,6 +12,9 @@ import AuthMe  from './pages/Auth/AuthMe.jsx';
 import Roles from './pages/Roles/Roles.jsx';
 import FilesPage from './pages/Files/FilesPage.jsx';
 
+import ProcessTask from './pages/Tasks/ProcessTask.jsx';
+import UploadTask from './pages/Tasks/UploadTask.jsx';
+
 
 const App = () => {
   return (
@@ -27,6 +30,9 @@ const App = () => {
 
       <Route path="/roles" element={<Roles />} />
       <Route path="/files" element={<FilesPage />} />
+
+      <Route path="/tasks/process" element={<ProcessTask />} />
+      <Route path="/tasks/upload" element={<UploadTask />} />
     </Routes>
   );
 };
