@@ -23,6 +23,7 @@ import Summarize from './pages/AI/Summarize.jsx';
 import Sentiment from './pages/AI/Sentiment.jsx';
 import TTSPage from './pages/AI/TTSPage.jsx';
 import STTPage from './pages/AI/STTPage.jsx';
+import AIChatPage from './pages/AI/AIChatPage.jsx';
 
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
       <Route path="/ai/sentiment" element={<Sentiment />} />
       <Route path="/ai/tts" element={<TTSPage />} />
       <Route path="/ai/stt" element={<STTPage />} />
+      <Route path="/ai/chat" element={<AIChatPage />} />
     </Routes>
   );
 };

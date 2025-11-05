@@ -25,3 +25,10 @@ export const speechToText = async (formData) => {
   });
   return res.data;
 };
+
+// AI chat
+export const chatWithAI = async (data) => {
+  const res = await api.post("/ai/chat", data);
+  return res.data;
+};
+
