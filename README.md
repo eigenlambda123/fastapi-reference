@@ -1,9 +1,5 @@
-Here’s a polished **README.md** for your repo **hackaton‑boilerplates**. You can paste this into your repository root and adjust any section (especially the “Usage” part) to match how your boilerplates are structured.
+# hackaton-boilerplates 
 
----
-
-````markdown
-# hackaton-boilerplates 🚀  
 *Boilerplate starter kits for rapid hackathon development (backend + frontend).*
 
 ## Table of Contents  
